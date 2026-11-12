@@ -1,0 +1,39 @@
+:root{--bg:#F4F6F3;--ink:#1B2A28;--mute:#5C6B68;--leaf:#2E7D4F;--beet:#B3245C;--sun:#F2B632;--line:#D9DFDA;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#121917;--ink:#E8EFEC;--mute:#97A6A2;--leaf:#5CC388;--beet:#F06A9A;--line:#2A3733;--card:#1A2421}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Bricolage Grotesque",system-ui,sans-serif;padding-bottom:80px}
+header{padding:28px 20px 8px;max-width:640px;margin:auto}
+h1{margin:0;font-size:2.4rem;letter-spacing:-.03em;color:var(--beet)}
+header p{margin:4px 0 0;color:var(--mute)}
+main{max-width:640px;margin:auto;padding:12px 20px}
+.vue[hidden]{display:none}
+#foyer{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+label{display:grid;gap:4px;font-size:.85rem;color:var(--mute)}
+input{font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+#resume{margin:16px 0;padding:14px;border-left:6px solid var(--leaf);background:var(--card)}
+#resume.depasse{border-color:var(--beet)}
+#resume strong{font-size:1.6rem}
+.barre{height:8px;background:var(--line);margin-top:8px;border-radius:4px;overflow:hidden}
+.barre i{display:block;height:100%;background:var(--leaf)}
+.depasse .barre i{background:var(--beet)}
+ul{list-style:none;padding:0;margin:0}
+#liste li,#offres li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+#liste li.opt{opacity:.55}
+#liste input[type=checkbox]{width:22px;height:22px;accent-color:var(--leaf)}
+.nom{flex:1}.nom small{display:block;color:var(--mute)}
+.prix{font-variant-numeric:tabular-nums;font-weight:600}
+li.fait .nom{text-decoration:line-through;color:var(--mute)}
+#ajout{display:flex;gap:8px;margin-top:16px}
+#ajout input:last-of-type{width:90px}
+button{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:10px 14px;background:var(--leaf);color:#fff}
+.filtres{display:flex;gap:8px;margin-bottom:8px}
+.filtres button{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.filtres button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.badge{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.78rem;font-weight:600;background:var(--sun);color:#1B2A28}
+.badge.urgent{background:var(--beet);color:#fff}
+.vieux{text-decoration:line-through;color:var(--mute);font-weight:400}
+.cible{background:var(--card);color:var(--leaf);border:1px solid var(--leaf);padding:6px 10px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line)}
+nav button{flex:1;background:none;color:var(--mute);border-radius:0;padding:18px}
+nav button[aria-current=page]{color:var(--beet);font-weight:700;box-shadow:inset 0 3px var(--beet)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
